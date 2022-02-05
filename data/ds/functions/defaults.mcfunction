@@ -4,7 +4,7 @@
 # intervals
 scoreboard players set min global 60
 scoreboard players set max global 300
-# (in seconds), 1-5
+# (in seconds), 1-5 minutes
 
 # extras
 scoreboard players set cut_clean global 1
