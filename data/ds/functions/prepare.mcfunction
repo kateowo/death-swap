@@ -5,6 +5,9 @@
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 
+# bossbar
+bossbar add ds:main ""
+
 # death
 scoreboard objectives add death deathCount
 
