@@ -7,6 +7,7 @@ scoreboard objectives add internal dummy
 
 # bossbar
 bossbar add ds:main ""
+bossbar set ds:main color red
 
 # death
 scoreboard objectives add death deathCount

@@ -1,10 +1,9 @@
 # DS defaults
 
 
-# intervals
-scoreboard players set min global 60
-scoreboard players set max global 300
-# (in seconds), 1-5 minutes
+# interval
+scoreboard players set interval global 300
+# (in seconds), 5 minutes
 
 # extras
 scoreboard players set cut_clean global 1
