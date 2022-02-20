@@ -2,6 +2,9 @@
 # (while swapping is going on)
 
 
+# un-mark swap-pass if time is 0
+execute if score time_s internal matches 0 if score swap_pass internal matches 1.. run scoreboard players set swap_pass internal 0
+
 # logging
 execute if score period internal matches 1 if score swap internal matches 1.. if score logging internal matches 1.. run tellraw @a {"text":"Loop started","color":"yellow"}
 
