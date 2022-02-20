@@ -20,3 +20,6 @@ worldborder set 5000 5
 
 # set period
 scoreboard players set period internal 1
+
+# logging
+execute if score logging internal matches 1.. run tellraw @a {"text":"Logging enabled via internal, log messages will appear like this","color":"yellow"}

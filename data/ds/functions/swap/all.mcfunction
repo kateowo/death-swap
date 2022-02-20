@@ -1,6 +1,9 @@
 # DS swapping
 
 
+# logging
+execute if score logging internal matches 1.. run tellraw @a {"text":"Swapping 2 players (swap/all)","color":"yellow"}
+
 # tag self [self]
 tag @s add self
 # tag @r to swap [alt]
@@ -24,3 +27,6 @@ tag @a[tag=swap_1,limit=1] add swapped
 execute as @e[tag=swap_0,limit=1] at @s run forceload remove ~ ~
 execute as @e[tag=swap_0,limit=1] at @s run kill @s
 tag @a remove self
+
+# logging
+execute if score logging internal matches 1.. run tellraw @a {"text":"Swapped 2 players (swap/all)","color":"yellow"}

@@ -9,6 +9,9 @@ scoreboard players set interval global 300
 scoreboard players set cut_clean global 1
 scoreboard players set speed_uhc global 1
 
+# logging
+scoreboard players set logging internal 0
+
 # world
 worldborder set 10
 gamerule doImmediateRespawn true

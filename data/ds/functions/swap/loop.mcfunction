@@ -2,6 +2,9 @@
 # (while swapping is going on)
 
 
+# logging
+execute if score logging internal matches 1.. run tellraw @a {"text":"Loop started","color":"yellow"}
+
 # count up players swapped
 execute if score period internal matches 1 if score swap internal matches 1.. run scoreboard players set swap_players internal 0
 execute if score period internal matches 1 if score swap internal matches 1.. as @a[tag=!swapped] run scoreboard players add swap_players internal 1
@@ -13,5 +16,6 @@ execute if score period internal matches 1 as @a[tag=!swapped,limit=1] at @s if 
 
 # reset scores (when finished)
 execute if score period internal matches 1 as @a at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run scoreboard players set swap_pass internal 0
+execute if score period internal matches 1 as @a at @s if score swap internal matches 1.. if score swap_players internal matches ..1 if score logging internal matches 1.. run tellraw @a {"text":"Loop ended","color":"yellow"}
 execute if score period internal matches 1 as @a at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run scoreboard players set time_s internal 0
 execute if score period internal matches 1 as @a at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run scoreboard players set swap internal 0
