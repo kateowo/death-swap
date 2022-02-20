@@ -7,6 +7,7 @@ tag @a remove last_swap_1
 tag @a remove last
 tag @a remove swap_1
 
+# ensure swap function is not run 20 times (when time requirement met)
 scoreboard players set swap_pass internal 1
 
 # count players
