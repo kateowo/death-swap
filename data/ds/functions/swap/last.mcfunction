@@ -1,28 +1,28 @@
 # DS swapping
-# for odd-checks and 2 players
+# for odd-checks
 
 
-# tag self
+# tag self [self]
 tag @s add self
-# choose random player
+# tag @r to swap [alt]
 tag @r[tag=swapped,tag=!self] add last_swap_1
+# note: alt will be swapped again (they had previously swapped) to allow remaining 1 to swap
 tag @a[tag=last_swap_1,limit=1] remove swapped
 
-# set marker stand to temp-save location
+# set marker stand to temp-save your location [self-marker]
 summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["last_swap_0"]}
 tp @e[tag=last_swap_0,limit=1,distance=..5] @s
 forceload add ~ ~
 
-# swap with random player
+# tp self to alt
 tp @s @a[tag=last_swap_1,limit=1]
+# tp alt to self-marker
 tp @a[tag=last_swap_1,limit=1] @e[tag=last_swap_0,limit=1]
 
-# tag with swapped
+# tag both with swapped (so odd check is not triggered again)
 tag @a add swapped
 
-# remove marker stand
+# remove temp stuff
 execute as @e[tag=last_swap_0,limit=1] at @s run forceload remove ~ ~
 execute as @e[tag=last_swap_0,limit=1] at @s run kill @s
-
-# remove self tag
 tag @a remove self
