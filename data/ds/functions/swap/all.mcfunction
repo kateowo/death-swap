@@ -10,7 +10,7 @@ tag @s add self
 tag @r[tag=swapped,tag=!self] add swap_1
 
 # set marker stand to temp-save your location [self-marker]
-summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["swap_0"]}
+summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["swap_0"],Silent:1b}
 tp @e[tag=swap_0,limit=1,distance=..5] @s
 forceload add ~ ~
 
