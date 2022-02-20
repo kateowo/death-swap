@@ -7,7 +7,9 @@ bossbar set ds:main players @a
 execute if score period internal matches 1 run team join players @a[team=!players]
 
 # swap loop
-function ds:swap/loop
+execute if score period internal matches 1 run function ds:swap/loop
+# time loop
+execute if score period internal matches 1 run function ds:time
 
 # options
 execute if score cut_clean global matches 1.. run function ds:extras/cut_clean
