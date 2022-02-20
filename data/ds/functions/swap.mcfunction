@@ -20,4 +20,6 @@ execute as @a run scoreboard players add players internal 1
 # swap
 execute if score players internal matches 3.. run scoreboard players set swap internal 1
 # if only 2
-execute if score players internal matches ..2 as @a at @s run function ds:swap/last
+execute if score players internal matches ..2 run scoreboard players set time_s internal 0
+execute if score players internal matches ..2 run tag @r add swapped
+execute if score players internal matches ..2 as @r[tag=!swapped] at @s run function ds:swap/last
