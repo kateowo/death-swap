@@ -3,7 +3,7 @@
 
 
 # logging
-execute if score logging internal matches 1.. run tellraw @a {"text":"Loop started","color":"yellow"}
+execute if score period internal matches 1 if score swap internal matches 1.. if score logging internal matches 1.. run tellraw @a {"text":"Loop started","color":"yellow"}
 
 # count up players swapped
 execute if score period internal matches 1 if score swap internal matches 1.. run scoreboard players set swap_players internal 0
