@@ -1,4 +1,8 @@
 # DS setup
 
 
-# coming soon
+# tellraw
+tellraw @a ["",{"text":"\nDEATHSWAP Setup\n\n","color":"red","bold":true},{"text":"Before the game begins, check your options and invite everyone to the game.\n"},{"text":"\nOPTIONS:","color":"red","bold":true},{"text":"\nCut Clean: "},{"text":"[ON]","color":"green","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"(default)"}]},"clickEvent":{"action":"run_command","value":"/scoreboard players set cut_clean global 1"}},{"text":" [OFF]","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/scoreboard players set cut_clean global 0"}},{"text":"\nSpeed UHC: "},{"text":"[ON]","color":"green","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"(default)"}]},"clickEvent":{"action":"run_command","value":"/scoreboard players set speed_uhc global 1"}},{"text":" [OFF]","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/scoreboard players set speed_uhc global 0"}},{"text":"\n\nTo configure the interval between swaps, run "},{"text":"/scoreboard players set interval global ","color":"dark_gray"},{"text":"[value]","color":"gray"},{"text":"\n^ this is measured in seconds\n\nOnce you're ready, run "},{"text":"/function ds:start","color":"green","clickEvent":{"action":"run_command","value":"/function ds:start"}},{"text":" and let the games begin!\n"}]
+
+
+scoreboard players set setup internal 1
