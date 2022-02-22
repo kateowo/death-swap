@@ -10,3 +10,4 @@
 - [ ] ^ make last seconds customisable, `interval_end` in `global` (default 5?)
 - [ ] make first swap substantially longer (10m?)
 - [ ] make swap intervals around 20-40s (?)
+- [ ] add warning before swapping (customisable), `interval_warn` in `global` (default 1m?)
