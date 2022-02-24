@@ -21,3 +21,8 @@ execute unless score swap_pass internal matches 1.. if score time_s internal >= 
 
 # swap warn
 execute unless score swap_warn internal matches 1.. if score time_s internal = interval_warn global run function ds:swap/warn
+
+# swap warn
+scoreboard players operation interval_count internal = interval global
+scoreboard players operation interval_count internal -= 5 internal
+execute unless score swap_count internal matches 1.. if score time_s internal = interval_count internal run function ds:swap/count

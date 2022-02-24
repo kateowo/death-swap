@@ -21,6 +21,8 @@ scoreboard players set interval_warn global 240
 worldborder set 10
 gamerule doImmediateRespawn true
 gamerule keepInventory false
+# internal
+scoreboard players set 5 internal 5
 
 # period
 scoreboard players set period internal -1

@@ -1,6 +1,8 @@
 # DS swap-warn countdown
 
 
+scoreboard players set swap_count internal 1
+
 # 5
 function ds:swap/count/5
 # 4
