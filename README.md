@@ -1,3 +1,5 @@
 ## DEATH SWAP
 
-being actively developed, around 99% complete - track remaining progress in [the todo](TODO.md)
+being actively developed, core and everything 100% complete - more small changes may come before releasing.
+
+stay tuned !
