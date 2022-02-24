@@ -9,6 +9,13 @@ scoreboard players operation interval global -= interval_lower global
 scoreboard players set swap_pass internal 0
 scoreboard players set time_s internal 0
 scoreboard players set swap internal 0
+scoreboard players set swap_warn internal 0
 
 # logging
 execute if score logging internal matches 1.. run tellraw @a {"text":"Loop ended","color":"yellow"}
+
+# tellraw
+tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You have been swapped!","color":"yellow"}]
+# sfx
+execute as @a at @s run playsound minecraft:ui.toast.in player @s
+execute as @a at @s run playsound minecraft:entity.player.levelup player @s

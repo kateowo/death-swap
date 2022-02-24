@@ -18,3 +18,6 @@ execute if score period internal matches 1 store result bossbar ds:main max run 
 # swap interval
 execute unless score swap_pass internal matches 1.. if score time_s internal >= interval global run function ds:swap
 # will only run once thanks to ^ which is set upon ds:swap being ran
+
+# swap warn
+execute unless score swap_warn internal matches 1.. if score time_s internal = interval_warn global run function ds:swap/warn

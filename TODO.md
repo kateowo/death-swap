@@ -3,7 +3,7 @@
 - [ ] replace placeholder in `vip:start` to display actual interval time in minutes (calculated, / 60)
 - [x] add timer
 - [x] fix bossbar values
-- [ ] ensure winning scripts are working
+- [x] ensure winning scripts are working
 - [x] test for 2+
 - [x] after every swap, decrease the swap interval by set amount in global, aka. `interval_lower` in `global`
 - [ ] make bossbar visibility optional (by default only display in last x secs), `show_interval` in `global`
