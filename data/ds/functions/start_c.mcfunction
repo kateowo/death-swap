@@ -9,8 +9,10 @@ execute as @a run scoreboard players add alive internal 1
 tag @a remove win
 
 # announce
+scoreboard players operation interval_60 internal = interval global
+scoreboard players operation interval_60 internal /= 60 internal
 title @a title ["",{"text":"DEATH ","color":"red","bold":true},{"text":"SWAP","color":"yellow","bold":true}]
-title @a subtitle {"text":"You will be swapped after 5 minutes, make sure you're prepared."}
+title @a subtitle [{"text":"You will be swapped after "},{"score":{"name":"interval_60","objective":"internal"}},{"text":" minutes, make sure you're prepared."}]
 # sfx
 execute as @a at @s run playsound entity.generic.explode player @s ~ ~ ~
 execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~

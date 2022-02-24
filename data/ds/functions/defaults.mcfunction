@@ -23,6 +23,7 @@ gamerule doImmediateRespawn true
 gamerule keepInventory false
 # internal
 scoreboard players set 5 internal 5
+scoreboard players set 60 internal 60
 
 # period
 scoreboard players set period internal -1
