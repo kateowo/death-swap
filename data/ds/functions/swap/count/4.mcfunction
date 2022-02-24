@@ -1,0 +1,2 @@
+# tellraw
+tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"4 seconds","color":"gold"},{"text":" until the next swap, get ready!","color":"yellow"}]

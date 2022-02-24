@@ -18,4 +18,5 @@ execute if score logging internal matches 1.. run tellraw @a {"text":"Loop ended
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You have been swapped!","color":"yellow"}]
 # sfx
 execute as @a at @s run playsound minecraft:ui.toast.in player @s
+execute as @a at @s run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 100 2
 execute as @a at @s run playsound minecraft:entity.player.levelup player @s
