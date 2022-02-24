@@ -9,10 +9,13 @@
 - [ ] make bossbar visibility optional, `show_interval` in `global`
 - [x] make swap intervals around 20-40s (?)
 - [x] add warning before swapping (customisable), `interval_warn` in `global` (default 1m?)
-- [ ] :tf: (arran knows)
 
 ## essentially
 
 - [x] test for 2+
 - [x] add interval warnings
 - [x] finish & clean up areas of code
+
+## unsure
+
+- [ ] :tf: (arran knows)
