@@ -4,7 +4,8 @@
 # world
 bossbar set ds:main players @a
 # join players
-execute if score period internal matches 1 run team join players @a[team=!players]
+execute if score period internal matches 1 run team join players @a[team=!players,gamemode=!spectator]
+execute if score period internal matches 1 run team leave @a[gamemode=spectator]
 
 # swap loop
 execute if score period internal matches 1 run function ds:swap/loop

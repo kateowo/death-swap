@@ -7,7 +7,7 @@ execute if score logging internal matches 1.. run tellraw @a {"text":"Swapping 2
 # tag self [self]
 tag @s add self
 # tag @r to swap [alt]
-tag @r[tag=swapped,tag=!self] add swap_1
+tag @r[tag=swapped,tag=!self,gamemode=!spectator] add swap_1
 
 # set marker stand to temp-save your location [self-marker]
 summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["swap_0"],Silent:1b}
