@@ -14,5 +14,5 @@
 ## essentially
 
 - [x] test for 2+
-- [ ] add interval warnings
-- [ ] finish & clean up areas of code
+- [x] add interval warnings
+- [x] finish & clean up areas of code
