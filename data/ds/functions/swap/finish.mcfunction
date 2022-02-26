@@ -3,8 +3,8 @@
 
 
 # reduce interval
-scoreboard players operation interval global -= interval_lower global
-scoreboard players operation interval_warn global -= interval_lower global
+execute if score interval global >= interval_min global if score interval global >= hard_min internal run scoreboard players operation interval global -= interval_lower global
+execute if score interval global >= interval_min global if score interval global >= hard_min internal run scoreboard players operation interval_warn global -= interval_lower global
 
 # scores
 scoreboard players set swap_pass internal 0

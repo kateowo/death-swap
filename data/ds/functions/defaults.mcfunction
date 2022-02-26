@@ -4,6 +4,9 @@
 # interval
 scoreboard players set interval global 300
 # (in seconds), 5 minutes
+# min value
+scoreboard players set interval_min global 40
+scoreboard players set hard_min internal 5
 
 # extras
 scoreboard players set cut_clean global 1
