@@ -2,8 +2,6 @@
 # should only run upon swapping finish
 
 
-# tellraw
-tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You have been swapped!","color":"yellow"}]
 # sfx
 playsound minecraft:ui.toast.in player @s
 playsound minecraft:block.note_block.pling player @s ~ ~ ~ 100 2

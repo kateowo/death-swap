@@ -19,9 +19,11 @@ forceload add ~ ~
 
 # tp self to alt
 tp @s @a[tag=last_swap_1,limit=1]
+tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You have been swapped with ","color":"yellow"},{"selector":"@a[tag=last_swap_1,limit=1]","color":"gold"},{"text":"!","color":"yellow"}]
 execute if score logging internal matches 1.. run tellraw @a [{"text":"Swapped ","color":"yellow"},{"selector":"@s","color":"gold"},{"text":" with ","color":"yellow"},{"selector":"@a[tag=last_swap_1,limit=1]","color":"gold"}]
 # tp alt to self-marker
 tp @a[tag=last_swap_1,limit=1] @e[tag=last_swap_0,limit=1]
+tellraw @a[tag=last_swap_1,limit=1] ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You have been swapped with ","color":"yellow"},{"selector":"@s","color":"gold"},{"text":"!","color":"yellow"}]
 execute if score logging internal matches 1.. run tellraw @a [{"text":"Swapped ","color":"yellow"},{"selector":"@a[tag=last_swap_1,limit=1]","color":"gold"},{"text":" with ","color":"yellow"},{"selector":"@s","color":"gold"}]
 
 # tag both with swapped (so odd check is not triggered again)
