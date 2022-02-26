@@ -19,6 +19,8 @@ execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~
 
 # world
 worldborder set 5000 5
+# health boost
+execute if score health_boost global matches 1.. run effect give @a[gamemode=!spectator] health_boost 9999 2 true
 
 # set period
 scoreboard players set period internal 1

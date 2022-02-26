@@ -8,6 +8,8 @@ scoreboard players set interval global 300
 # extras
 scoreboard players set cut_clean global 1
 scoreboard players set speed_uhc global 1
+# health boost
+scoreboard players set health_boost global 1
 
 # logging
 scoreboard players set logging internal 0
