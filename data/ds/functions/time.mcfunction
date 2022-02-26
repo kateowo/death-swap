@@ -14,6 +14,9 @@ execute if score period internal matches 1 run bossbar set ds:main name ["",{"te
 execute if score period internal matches 1 store result bossbar ds:main value run scoreboard players get time_s internal
 execute if score period internal matches 1 store result bossbar ds:main max run scoreboard players get interval global
 
+# end grace period
+execute if score period internal matches 0 if score time_s internal = grace_period global run function ds:main_period
+
 
 # swap interval
 execute unless score swap_pass internal matches 1.. if score time_s internal >= interval global run function ds:swap
