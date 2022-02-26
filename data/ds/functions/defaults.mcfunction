@@ -29,6 +29,9 @@ gamemode adventure @a[gamemode=!spectator]
 scoreboard players set 5 internal 5
 scoreboard players set 60 internal 60
 
+# grace period
+scoreboard players set grace_period global 300
+
 # period
 scoreboard players set period internal -1
 
