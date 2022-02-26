@@ -15,7 +15,7 @@ scoreboard players set swap_pass internal 1
 
 # count players
 scoreboard players set players internal 0
-execute as @a run scoreboard players add players internal 1
+execute as @a[gamemode=!spectator] run scoreboard players add players internal 1
 
 # swap
 execute if score players internal matches 3.. run scoreboard players set swap internal 1

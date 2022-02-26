@@ -5,7 +5,7 @@ scoreboard players set can_start internal 0
 
 # count up players
 scoreboard players reset alive internal
-execute as @a run scoreboard players add alive internal 1
+execute as @a[gamemode=!spectator] run scoreboard players add alive internal 1
 
 # check
 execute if score alive internal matches 2.. run scoreboard players set can_start internal 1

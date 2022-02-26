@@ -4,6 +4,7 @@
 
 # reduce interval
 scoreboard players operation interval global -= interval_lower global
+scoreboard players operation interval_warn global -= interval_lower global
 
 # scores
 scoreboard players set swap_pass internal 0
@@ -18,9 +19,9 @@ execute if score logging internal matches 1.. run tellraw @a {"text":"Loop ended
 # tellraw
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You have been swapped!","color":"yellow"}]
 # sfx
-execute as @a at @s run playsound minecraft:ui.toast.in player @s
-execute as @a at @s run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 100 2
-execute as @a at @s run playsound minecraft:entity.player.levelup player @s
+execute as @a[gamemode=!spectator] at @s run playsound minecraft:ui.toast.in player @s
+execute as @a[gamemode=!spectator] at @s run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 100 2
+execute as @a[gamemode=!spectator] at @s run playsound minecraft:entity.player.levelup player @s
 # particles
-execute as @a at @s run particle minecraft:flame ~ ~ ~ 0 0 0 0.5 20
-execute as @a at @s run particle minecraft:smoke ~ ~ ~ 0 0 0 0.25 30
+execute as @a[gamemode=!spectator] at @s run particle minecraft:flame ~ ~ ~ 0 0 0 0.5 20
+execute as @a[gamemode=!spectator] at @s run particle minecraft:smoke ~ ~ ~ 0 0 0 0.25 30

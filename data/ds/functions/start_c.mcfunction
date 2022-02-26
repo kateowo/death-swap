@@ -4,7 +4,7 @@
 
 # count up players
 scoreboard players reset alive internal
-execute as @a run scoreboard players add alive internal 1
+execute as @a[gamemode=!spectator] run scoreboard players add alive internal 1
 # remove tags
 tag @a remove win
 
