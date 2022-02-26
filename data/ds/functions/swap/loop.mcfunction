@@ -18,5 +18,5 @@ execute if score period internal matches 1 as @r at @s if score swap internal ma
 execute if score period internal matches 1 as @a[tag=!swapped,limit=1,gamemode=!spectator] at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run function ds:swap/last
 
 # reset scores (when finished)
-execute if score period internal matches 1 as @a at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run function ds:swap/finish_players
+execute if score period internal matches 1 as @a[gamemode=!spectator] at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run function ds:swap/finish_players
 execute if score period internal matches 1 if score swap internal matches 1.. if score swap_players internal matches ..1 run function ds:swap/finish
