@@ -10,7 +10,7 @@ bossbar add ds:main ""
 bossbar set ds:main color red
 # grace period
 bossbar add ds:grace ""
-bossbar set ds:grace color green
+bossbar set ds:grace color red
 
 # death
 scoreboard objectives add death deathCount
