@@ -8,7 +8,7 @@ execute if score logging internal matches 1.. run tellraw @a {"text":"Swapping 2
 # tag self [self]
 tag @s add self
 # tag @r to swap [alt]
-tag @r[tag=swapped,tag=!self] add last_swap_1
+tag @r[tag=swapped,tag=!self,gamemode=!spectator] add last_swap_1
 # note: alt will be swapped again (they had previously swapped) to allow remaining 1 to swap
 tag @a[tag=last_swap_1,limit=1] remove swapped
 
