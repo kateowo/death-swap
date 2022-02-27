@@ -8,8 +8,8 @@ execute unless score show_interval global matches 1.. run bossbar set ds:main pl
 execute if score period internal matches 0 run bossbar set ds:grace players @a
 execute unless score period internal matches 0 run bossbar set ds:grace players
 # join players
-execute if score period internal matches 1 run team join players @a[team=!players,gamemode=!spectator]
-execute if score period internal matches 1 run team leave @a[gamemode=spectator]
+execute if score period internal matches 0..1 run team join players @a[team=!players,gamemode=!spectator]
+execute if score period internal matches 0..1 run team leave @a[gamemode=spectator]
 
 # swap loop
 execute if score period internal matches 1 run function ds:swap/loop
