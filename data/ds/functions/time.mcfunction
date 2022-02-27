@@ -23,13 +23,13 @@ execute if score period internal matches 0 if score time_s internal >= grace_per
 
 
 # swap interval
-execute unless score swap_pass internal matches 1.. if score time_s internal >= interval global run function ds:swap
+execute if score period internal matches 1 unless score swap_pass internal matches 1.. if score time_s internal >= interval global run function ds:swap
 # will only run once thanks to ^ which is set upon ds:swap being ran
 
 # swap warn
-execute unless score swap_warn internal matches 1.. if score time_s internal = interval_warn global run function ds:swap/warn
+execute if score period internal matches 1 unless score swap_warn internal matches 1.. if score time_s internal = interval_warn global run function ds:swap/warn
 
 # swap warn
 scoreboard players operation interval_count internal = interval global
 scoreboard players operation interval_count internal -= 5 internal
-execute unless score swap_count internal matches 1.. if score time_s internal = interval_count internal run function ds:swap/count
+execute if score period internal matches 1 unless score swap_count internal matches 1.. if score time_s internal = interval_count internal run function ds:swap/count
