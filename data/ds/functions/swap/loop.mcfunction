@@ -13,7 +13,7 @@ execute if score period internal matches 1 if score swap internal matches 1.. ru
 execute if score period internal matches 1 if score swap internal matches 1.. as @a[tag=!swapped,gamemode=!spectator] run scoreboard players add swap_players internal 1
 
 # run (if more than 2 left)
-execute if score period internal matches 1 as @r at @s if score swap internal matches 1.. if score swap_players internal matches 2.. run function ds:swap/all
+execute if score period internal matches 1 as @r[gamemode=!spectator] at @s if score swap internal matches 1.. if score swap_players internal matches 2.. run function ds:swap/all
 # run (if 1 left aka. odd check)
 execute if score period internal matches 1 as @a[tag=!swapped,limit=1,gamemode=!spectator] at @s if score swap internal matches 1.. if score swap_players internal matches ..1 run function ds:swap/last
 
