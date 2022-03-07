@@ -27,7 +27,7 @@ tellraw @a[tag=last_swap_1,limit=1] ["",{"text":"[","color":"dark_gray"},{"text"
 execute if score logging internal matches 1.. run tellraw @a [{"text":"Swapped ","color":"yellow"},{"selector":"@a[tag=last_swap_1,limit=1]","color":"gold"},{"text":" with ","color":"yellow"},{"selector":"@s","color":"gold"}]
 
 # tag both with swapped (so odd check is not triggered again)
-tag @a add swapped
+tag @a[gamemode=!spectator] add swapped
 
 # remove temp stuff
 execute as @e[tag=last_swap_0,limit=1] at @s run forceload remove ~ ~
