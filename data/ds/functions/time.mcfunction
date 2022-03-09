@@ -22,6 +22,10 @@ execute if score period internal matches 0 store result bossbar ds:grace max run
 execute if score period internal matches 0 if score time_s internal >= grace_period global run function ds:main_period
 
 
+# ensure swap warn + count is unset
+execute if score time_s internal < interval_warn global run scoreboard players set swap_warn internal 0
+execute if score time_s internal < interval_count global run scoreboard players set swap_count internal 0
+
 # swap interval
 execute if score period internal matches 1 unless score swap_pass internal matches 1.. if score time_s internal >= interval global run function ds:swap
 # will only run once thanks to ^ which is set upon ds:swap being ran
