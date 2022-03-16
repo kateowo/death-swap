@@ -27,3 +27,6 @@ execute unless score period internal matches 1 run scoreboard players reset @a d
 # win checks
 execute if score period internal matches 1 if score alive internal matches ..1 run tag @a[gamemode=survival,limit=1] add win
 execute if score period internal matches 1 if score alive internal matches ..1 run function ds:win
+
+# period checks
+function ds:last_login

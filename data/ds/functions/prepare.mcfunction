@@ -4,6 +4,7 @@
 # scoreboards
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
+scoreboard objectives add last_login dummy
 
 # bossbar
 bossbar add ds:main ""
