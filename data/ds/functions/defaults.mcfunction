@@ -26,7 +26,6 @@ scoreboard players set interval_warn global 240
 worldborder set 10
 gamerule doImmediateRespawn true
 gamerule keepInventory false
-gamerule fallDamage false
 effect clear @a
 gamemode adventure @a[gamemode=!spectator]
 # internal
