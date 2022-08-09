@@ -7,13 +7,13 @@ execute if score time internal matches 20.. run scoreboard players add time_s in
 execute if score time internal matches 20.. run scoreboard players set time internal 0
 
 # bossbar
-# 0
+## 0
 execute if score period internal matches -1 run bossbar set ds:main name {"text":"The game will begin shortly!"}
-# 1
+## 1
 execute if score period internal matches 1 run bossbar set ds:main name {"text":"DEATH SWAP","color":"red","bold":true}
 execute if score period internal matches 1 store result bossbar ds:main value run scoreboard players get time_s internal
 execute if score period internal matches 1 store result bossbar ds:main max run scoreboard players get interval global
-# grace
+## grace
 execute if score period internal matches 0 run bossbar set ds:grace name {"text":"DEATH SWAP - GRACE PERIOD","color":"red","bold":true}
 execute if score period internal matches 0 store result bossbar ds:grace value run scoreboard players get time_s internal
 execute if score period internal matches 0 store result bossbar ds:grace max run scoreboard players get grace_period global
@@ -28,7 +28,7 @@ execute if score time_s internal < interval_count global run scoreboard players 
 
 # swap interval
 execute if score period internal matches 1 unless score swap_pass internal matches 1.. if score time_s internal >= interval global run function ds:swap
-# will only run once thanks to ^ which is set upon ds:swap being ran
+## will only run once thanks to ^ which is set upon ds:swap being ran
 
 # swap warn
 execute if score period internal matches 1 unless score swap_warn internal matches 1.. if score time_s internal = interval_warn global run function ds:swap/warn

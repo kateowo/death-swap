@@ -1,4 +1,6 @@
-# DS fix
+# DS swap fix
+## should be run incase something goes wrong
+## resets main scoreboards related to swapping & timers
 
 
 # scores
