@@ -19,6 +19,7 @@ execute if score period internal matches 0..1 run function ds:time
 # options
 execute if score cut_clean global matches 1.. run function ds:extras/cut_clean
 execute if score speed_uhc global matches 1.. run function ds:extras/speed_uhc
+execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit global matches 1.. run function ds:extras/grindstone
 
 # death checks
 execute if score period internal matches 1 as @a[scores={death=1..}] at @s run function ds:death

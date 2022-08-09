@@ -22,6 +22,10 @@ scoreboard players set interval_lower global 20
 # 1m warn
 scoreboard players set interval_warn global 240
 
+# patch grindstone exploit
+## introduced in 2022.0809
+scoreboard players set patch_grindstone_exploit global 1
+
 # world
 worldborder set 10
 gamerule doImmediateRespawn true
